@@ -160,7 +160,7 @@ export function TableButtonsDraw(props) {
 }
 
 TableButtonsDraw.propTypes = {
-    actions: PropTypes.object,
+    actions: PropTypes.any,
     responseData: PropTypes.object,
     loading: PropTypes.bool,
     otherFunc: PropTypes.func,

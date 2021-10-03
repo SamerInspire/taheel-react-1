@@ -15,7 +15,7 @@ import { APIRequest } from 'src/api/APIRequest';
 import CentersTable from 'src/components/dashboard/CentersTable';
 import { getCurrentUser } from 'src/utils/UserLocalStorage';
 import MyTasksTable from 'src/components/dashboard/MyTasksTable';
-
+import { getMyTasksFun} from 'src/pages/services/data/servicesApi'
 const Dashboard = () => {
   const { userType } = getCurrentUser();
   console.log('userType+++++++++++', userType);
@@ -29,12 +29,6 @@ const Dashboard = () => {
   const getCentersFun = async (userEmail) => {
     const url = 'taheel-apis-records-getCenters-v2';
     const queryParams = { userEmail, startIndex: 1, batchSize: 5 };
-    const response = await APIRequest({ url, queryParams });
-    return response;
-  };
-  const getMyTasksFun = async (userEmail) => {
-    const url = 'taheel-apis-utilities-GetGetExternalUserTasks-v2';
-    const queryParams = { userEmail, taskStatus: 0 };
     const response = await APIRequest({ url, queryParams });
     return response;
   };

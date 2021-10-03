@@ -60,7 +60,7 @@ export default function AlertDialog(props) {
 AlertDialog.propTypes = {
 	onClose: PropTypes.func.isRequired,
 	open: PropTypes.bool.isRequired,
-	dialogContent: PropTypes.string.isRequired,
+	dialogContent: PropTypes.string,
 	dialogTitle: PropTypes.string.isRequired,
 	acceptBtnName: PropTypes.string.isRequired,
 	buttons: PropTypes.func,
